@@ -3,6 +3,12 @@ export const reducer = (state, action) => {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
+    // case "FILTERED_PRODUCT":
+    //   const filteredProduct = state.products.filter((product) => {
+    //     product.category === action.payload;
+    //   });
+    //   return { ...state, products: filteredProduct };
+
     case "ADD_TO_CART":
       const isExisted = state.cart.find(
         (item) => item.id === action.payload.id
@@ -14,10 +20,11 @@ export const reducer = (state, action) => {
       }
 
     case "REMOVE_FROM_CART":
-      const filteredProduct = state.cart.filter(
+      const removedProduct = state.cart.filter(
         (product) => product.id !== action.payload.id
       );
-      return { ...state, cart: filteredProduct };
+      return { ...state, cart: removedProduct };
+
     default:
       return state;
   }

@@ -48,7 +48,7 @@ const Cart = () => {
           <p className=' text-xl'>Your Cart is Empty!!!</p>
           <Link
             to={"/"}
-            className=' px-3 py-2 mt-5 text-3xl text-white bg-emerald-700 rounded'
+            className=' px-3 py-2 mt-5 text-3xl text-white bg-gray-700 rounded'
           >
             Go to Store
           </Link>

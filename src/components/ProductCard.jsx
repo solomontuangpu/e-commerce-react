@@ -36,7 +36,7 @@ for(let i=0; i<5; i++){
 }
 
   return (
-    <div className=' mt-28 px-5 pt-16 pb-5 shadow-sm w-[290px] h-[350px] relative border-2 border-black rounded-xl'>
+    <div className=' mt-16 px-5 pt-16 pb-5 shadow-sm w-[290px] h-[350px] relative border-2 border-black rounded-xl'>
       <img
         className=' h-[100px] object-cover absolute top-[-50px] left-[50px]'
         src={image}
@@ -51,11 +51,11 @@ for(let i=0; i<5; i++){
         <div>
           <div className=" flex items-center justify-between py-2">
             <span className=" flex">
-              {stars?.map((star) => {
+              {stars?.map((star, id) => {
                 if(star == "full" ) {
-                  return  <IoMdStar />; 
+                  return  <IoMdStar key={id} />; 
               }else{
-                return <IoStarOutline />;
+                return <IoStarOutline key={id} />;
               }})
             }
             </span>
