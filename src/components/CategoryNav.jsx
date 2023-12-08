@@ -21,7 +21,7 @@ const CategoryNav = () => {
         All
       </button>
       <button
-        onClick={() => handleClick("men's clothing")}
+        onClick={() => handleClick("gentlemen's clothing")}
         className=' border rounded-xl px-4 py-1 mr-3 focus:bg-slate-400'
       >
         Men

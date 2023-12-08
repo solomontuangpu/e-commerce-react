@@ -37,7 +37,15 @@ export const StateContextProvider = ({ children }) => {
   const fetchData = async () => {
     const api = await fetch("https://fakestoreapi.com/products");
     const products = await api.json();
-    setProductLists(products);
+
+    const newProducts = products.map(product => {
+      if(product.category == "men's clothing"){
+        return {...product, category: "gentlemen's clothing"}
+      }
+      return product;
+    })
+    setProductLists(newProducts);
+
   };
   // reducer
   const initialState = {

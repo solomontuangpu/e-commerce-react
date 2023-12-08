@@ -10,9 +10,7 @@ const Home = () => {
 
   return (
     <div
-      className={` flex flex-wrap gap-10 ${
-        products.length > 5 ? "justify-between" : " "
-      }`}
+      className={` flex flex-wrap gap-10`}
     >
       {products?.map((product) => (
         <ProductCard key={product.id} {...product} />
